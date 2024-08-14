@@ -1,0 +1,12 @@
+services:
+  main:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: makeos
+    tty: true
+    stdin_open: true
+    volumes:
+      - type: bind
+        source: .
+        target: /app
